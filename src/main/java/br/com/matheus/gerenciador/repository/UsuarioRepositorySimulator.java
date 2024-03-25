@@ -1,7 +1,7 @@
-package br.com.matheus.gerenciadorusuariosrestspringboot.repository;
+package br.com.matheus.gerenciador.repository;
 
-import br.com.matheus.gerenciadorusuariosrestspringboot.data.vo.v1.UsuarioVO;
-import br.com.matheus.gerenciadorusuariosrestspringboot.domain.model.Usuario;
+import br.com.matheus.gerenciador.data.vo.v1.UsuarioVO;
+import br.com.matheus.gerenciador.domain.model.Usuario;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

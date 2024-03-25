@@ -1,16 +1,16 @@
-package br.com.matheus.gerenciadorusuariosrestspringboot.unit;
+package br.com.matheus.gerenciador.unit;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import br.com.matheus.gerenciador.data.vo.v1.UsuarioVO;
+import br.com.matheus.gerenciador.domain.model.Usuario;
+import br.com.matheus.gerenciador.mapper.Mapeador;
+import br.com.matheus.gerenciador.mapper.mocks.UsuarioMock;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.util.List;
 
-import br.com.matheus.gerenciadorusuariosrestspringboot.data.vo.v1.UsuarioVO;
-import br.com.matheus.gerenciadorusuariosrestspringboot.domain.model.Usuario;
-import br.com.matheus.gerenciadorusuariosrestspringboot.mapper.Mapeador;
-import br.com.matheus.gerenciadorusuariosrestspringboot.mapper.mocks.UsuarioMock;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class DozerConverterTest {

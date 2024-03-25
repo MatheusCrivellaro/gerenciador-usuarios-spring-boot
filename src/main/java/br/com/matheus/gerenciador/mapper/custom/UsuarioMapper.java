@@ -1,10 +1,8 @@
-package br.com.matheus.gerenciadorusuariosrestspringboot.mapper.custom;
+package br.com.matheus.gerenciador.mapper.custom;
 
-import br.com.matheus.gerenciadorusuariosrestspringboot.data.vo.v2.UsuarioVOV2;
-import br.com.matheus.gerenciadorusuariosrestspringboot.domain.model.Usuario;
+import br.com.matheus.gerenciador.data.vo.v2.UsuarioVOV2;
+import br.com.matheus.gerenciador.domain.model.Usuario;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDate;
 
 @Service
 public class UsuarioMapper {

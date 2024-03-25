@@ -1,16 +1,15 @@
-package br.com.matheus.gerenciadorusuariosrestspringboot.controller;
+package br.com.matheus.gerenciador.controller;
 
-import java.util.List;
-
-import br.com.matheus.gerenciadorusuariosrestspringboot.data.vo.v1.UsuarioVO;
-import br.com.matheus.gerenciadorusuariosrestspringboot.data.vo.v2.UsuarioVOV2;
-import br.com.matheus.gerenciadorusuariosrestspringboot.domain.model.Usuario;
-import br.com.matheus.gerenciadorusuariosrestspringboot.mapper.Mapeador;
-import br.com.matheus.gerenciadorusuariosrestspringboot.mapper.custom.UsuarioMapper;
-import br.com.matheus.gerenciadorusuariosrestspringboot.repository.UsuarioRepository;
-import br.com.matheus.gerenciadorusuariosrestspringboot.repository.UsuarioRepositorySimulator;
+import br.com.matheus.gerenciador.data.vo.v1.UsuarioVO;
+import br.com.matheus.gerenciador.data.vo.v2.UsuarioVOV2;
+import br.com.matheus.gerenciador.domain.model.Usuario;
+import br.com.matheus.gerenciador.mapper.Mapeador;
+import br.com.matheus.gerenciador.mapper.custom.UsuarioMapper;
+import br.com.matheus.gerenciador.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/usuario")
@@ -52,11 +51,11 @@ public class UsuarioController {
 		var entidadeUsuario = repository.save(Mapeador.parseObject(dados, Usuario.class));
 		return Mapeador.parseObject(entidadeUsuario, UsuarioVO.class);
 	}
-	@PostMapping("/v2")
+	/*@PostMapping("/v2")
 	public UsuarioVOV2 createV2(@RequestBody UsuarioVOV2 dados) {
 		var entidadeUsuario = repository.save(mapeadorUsuario.convertVoToEntity(dados));
 		return mapeadorUsuario.convertEntityToVo(entidadeUsuario);
-	}
+	}*/
 	
 	@PutMapping
 	public UsuarioVO update(@RequestBody UsuarioVO dados) {

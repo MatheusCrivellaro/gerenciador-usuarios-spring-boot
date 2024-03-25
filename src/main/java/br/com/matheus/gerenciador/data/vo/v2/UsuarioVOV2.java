@@ -1,4 +1,4 @@
-package br.com.matheus.gerenciador.vo.v2;
+package br.com.matheus.gerenciador.data.vo.v2;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,7 +1,7 @@
-package br.com.matheus.gerenciadorusuariosrestspringboot.mapper.mocks;
+package br.com.matheus.gerenciador.mapper.mocks;
 
-import br.com.matheus.gerenciadorusuariosrestspringboot.data.vo.v1.UsuarioVO;
-import br.com.matheus.gerenciadorusuariosrestspringboot.domain.model.Usuario;
+import br.com.matheus.gerenciador.data.vo.v1.UsuarioVO;
+import br.com.matheus.gerenciador.domain.model.Usuario;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

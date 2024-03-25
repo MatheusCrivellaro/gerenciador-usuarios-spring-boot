@@ -1,4 +1,4 @@
-package br.com.matheus.gerenciadorusuariosrestspringboot.mapper;
+package br.com.matheus.gerenciador.mapper;
 
 import java.util.ArrayList;
 import java.util.List;

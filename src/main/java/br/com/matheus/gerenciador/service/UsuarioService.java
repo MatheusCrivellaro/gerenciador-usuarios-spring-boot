@@ -1,11 +1,9 @@
-package br.com.matheus.gerenciadorusuariosrestspringboot.service;
+package br.com.matheus.gerenciador.service;
 
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
-import java.util.logging.Formatter;
 
 @Service
 public class UsuarioService {
