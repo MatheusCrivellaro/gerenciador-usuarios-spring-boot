@@ -23,11 +23,18 @@ public class  CustomizedResponseEntityExceptionHandler extends ResponseEntityExc
 	}
 
 	@ExceptionHandler(DuplicateEntryKeyException.class)
-	public final ResponseEntity<ExceptionResponse> handleInternalServerErrorExceptions(Exception ex, WebRequest request) {
+	public final ResponseEntity<ExceptionResponse> handleDuplicateEntryKeyExceptions(Exception ex, WebRequest request) {
 
-		ExceptionResponse exceptionResponse = new ExceptionResponse(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
+		ExceptionResponse exceptionResponse = new ExceptionResponse(LocalDateTime.now(), ex.getMessage(), request.getDescription(false), "Um campo UNIQUE dupicado tentou ser inserido");
 
 		return new ResponseEntity<>(exceptionResponse, HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 
+	@ExceptionHandler(UsuarioByIdNotFoundException.class)
+	public final ResponseEntity<ExceptionResponse> handleUsuarioByIdNotFoundExceptions(Exception ex, WebRequest request) {
+
+		ExceptionResponse exceptionResponse = new ExceptionResponse(LocalDateTime.now(), ex.getMessage(), request.getDescription(false), "Nenhum Usuario foi encotrado cm esse ID.");
+
+		return new ResponseEntity<>(exceptionResponse, HttpStatus.NOT_FOUND);
+	}
 }

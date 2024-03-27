@@ -26,7 +26,7 @@ public class DozerConverterTest {
     public void parseEntityToVOTest() {
         UsuarioVO VO = Mapeador.parseObject(inputObject.mockEntity(), UsuarioVO.class);
         assertEquals(LocalDate.of(2000, 1, 1), VO.getDataNascimento());
-        assertEquals(Long.valueOf(0L), VO.getId());
+        assertEquals(Long.valueOf(0L), VO.getKey());
         assertEquals("Nome Test 0", VO.getNome());
         assertEquals("Email Test 0", VO.getEmail());
         assertEquals("Senha Test 0", VO.getSenha());

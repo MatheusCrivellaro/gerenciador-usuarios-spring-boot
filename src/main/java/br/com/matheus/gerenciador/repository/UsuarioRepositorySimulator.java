@@ -48,7 +48,7 @@ public class UsuarioRepositorySimulator {
 
     //Atualiza dados do Usuario, atravez de um VO
     public Usuario update(UsuarioVO dados) {
-        return findById(dados.getId()).update(dados);
+        return findById(dados.getKey()).update(dados);
     }
 
     //Busca Usuarios por Email
@@ -64,8 +64,7 @@ public class UsuarioRepositorySimulator {
     }
 
     //Busca Usuarios por username
-    public List<Usuario> findAllByUsername(String username) {
-        //retorna os usuarios nos quais os usernames possuem a String buscada, sem considerar Caixa Alta
-        return lista.stream().filter(usuario -> usuario.getUsername().toLowerCase().contains(username.toLowerCase())).toList();
+    public Usuario findByUsername(String username) {
+        return lista.stream().filter(usuario -> usuario.getUsername().toLowerCase().equals(username.toLowerCase())).findFirst().get();
     }
 }

@@ -1,6 +1,8 @@
 package br.com.matheus.gerenciador.domain.model;
 
 import br.com.matheus.gerenciador.data.vo.v1.UsuarioVO;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.github.dozermapper.core.Mapping;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
